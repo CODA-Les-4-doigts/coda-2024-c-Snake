@@ -15,40 +15,40 @@ void drawSnake(SDL_Renderer *renderer, Snake *snake, SDL_Texture *nyancattexture
         SDL_Rect dest_rect = {snake->position[i].x, snake->position[i].y, 32, 32};
 
         if (i == 0) {
-            // Determine head direction based on dx and dy
+        
             SDL_Rect rect_img_head;
 
             if (snake->dx > 0) {
-                // Moving right
-                rect_img_head = (SDL_Rect){32, 0, 32, 32};  // Head facing right
+                
+                rect_img_head = (SDL_Rect){32, 0, 32, 32};  
             } else if (snake->dx < 0) {
-                // Moving left
-                rect_img_head = (SDL_Rect){64, 0, 32, 32};  // Head facing left
+                
+                rect_img_head = (SDL_Rect){64, 0, 32, 32};  
             } else if (snake->dy > 0) {
-                // Moving down
-                rect_img_head = (SDL_Rect){128, 0, 32, 32};  // Head facing down
+                
+                rect_img_head = (SDL_Rect){128, 0, 32, 32};  
             } else if (snake->dy < 0) {
-                // Moving up
-                rect_img_head = (SDL_Rect){96, 0, 32, 32};  // Head facing up
+                
+                rect_img_head = (SDL_Rect){96, 0, 32, 32};  
             }
 
-            // Render the head with the correct direction
+            
             SDL_RenderCopy(renderer, nyancattexture, &rect_img_head, &dest_rect);
         }
         else if (i == snake->length - 1) {
-            // Tail of the snake
-            SDL_Rect rect_img_tail = {96, 0, 32, 32};  // Image section for the tail
+            
+            SDL_Rect rect_img_tail = {96, 0, 32, 32};  
             SDL_RenderCopy(renderer, nyancattexture, &rect_img_tail, &dest_rect);
         }
         else {
-            // Body logic (as before)
-            Point prev = snake->position[i - 1];    // Previous segment
-            Point next = snake->position[i + 1];    // Next segment
+            
+            Point prev = snake->position[i - 1];   
+            Point next = snake->position[i + 1];   
 
             if (prev.x == snake->position[i].x && next.x == snake->position[i].x)
                  {
-                // Straight body part
-                SDL_Rect rect_img_body = {192, 0, 32, 32};  // Image section for the body
+               
+                SDL_Rect rect_img_body = {192, 0, 32, 32};  
                 SDL_RenderCopy(renderer, nyancattexture, &rect_img_body, &dest_rect);
             }
             else if (prev.y == snake->position[i].y && next.y == snake->position[i].y)
@@ -57,20 +57,20 @@ void drawSnake(SDL_Renderer *renderer, Snake *snake, SDL_Texture *nyancattexture
                   SDL_RenderCopy(renderer, nyancattexture, &rect_img_body, &dest_rect);
               }
             else {
-                // Corner logic (as explained previously)
+               
                 SDL_Rect rect_img_corner;
                 if ((prev.x > snake->position[i].x && next.y > snake->position[i].y) ||
                     (next.x > snake->position[i].x && prev.y > snake->position[i].y)) {
-                    rect_img_corner = (SDL_Rect){288, 0, 32, 32};  // Bottom-right corner
+                    rect_img_corner = (SDL_Rect){288, 0, 32, 32}; 
                 } else if ((prev.x > snake->position[i].x && next.y < snake->position[i].y) ||
                            (next.x > snake->position[i].x && prev.y < snake->position[i].y)) {
-                    rect_img_corner = (SDL_Rect){224, 0, 32, 32};  // Top-right corner
+                    rect_img_corner = (SDL_Rect){224, 0, 32, 32};  
                 } else if ((prev.x < snake->position[i].x && next.y > snake->position[i].y) ||
                            (next.x < snake->position[i].x && prev.y > snake->position[i].y)) {
-                    rect_img_corner = (SDL_Rect){320, 0, 32, 32};  // Bottom-left corner
+                    rect_img_corner = (SDL_Rect){320, 0, 32, 32};  
                 } else if ((prev.x < snake->position[i].x && next.y < snake->position[i].y) ||
                            (next.x < snake->position[i].x && prev.y < snake->position[i].y)) {
-                    rect_img_corner = (SDL_Rect){256, 0, 32, 32};  // Top-left corner
+                    rect_img_corner = (SDL_Rect){256, 0, 32, 32};  
                 }
                 SDL_RenderCopy(renderer, nyancattexture, &rect_img_corner, &dest_rect);
             }
