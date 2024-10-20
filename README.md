@@ -18,3 +18,5 @@ Ce projet a été fait en collaboration avec Cecile Fischer | Victor Michi | Tho
   Le bonus que nous avons choisis est le suivant : 
     - Lors de votre partie vous avez une une chance sur 15 de faire apparaitre un **Arc-en-ciel**. 
       Vus que vous êtes un Nyan Cat vous gagner en puissance et augmentez votre "Snake" en +3. 
+
+- ATTENTION AU OREILLES BAISSER LE SON (Petit conseil)
