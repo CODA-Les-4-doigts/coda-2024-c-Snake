@@ -9,4 +9,12 @@ Ce projet a été fait en collaboration avec Cecile Fischer | Victor Michi | Tho
 - Comment y jouer : 
   Le Makefile a été fait pour les OS **ARCH LINUX** Donc si vous n'arrivez pas a le compiler veuillez changer le Makefile. 
 
-- Le jeu ce joue avec ****LES FLÈCHE DIRECTIONNEL DU CLAVIER****.
+- Le jeu ce joue avec ****LES FLÈCHE DIRECTIONNEL DU CLAVIER**** ⬅️⬆️⬇️➡️.
+
+
+# BONUS 
+
+- Le bonus :
+  Le bonus que nous avons choisis est le suivant : 
+    - Lors de votre partie vous avez une une chance sur 15 de faire apparaitre un **Arc-en-ciel**. 
+      Vus que vous êtes un Nian Cat vous gagner en puissance et augmentez votre "Snake" en +3. 
