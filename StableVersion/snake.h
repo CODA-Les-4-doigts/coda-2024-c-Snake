@@ -8,8 +8,10 @@
 #include <time.h>
 #include <SDL2/SDL_image.h>
 
-#define WINDOW_WIDTH 640
-#define WINDOW_HEIGHT 640
+#define WINDOW_WIDTH 672
+#define WINDOW_GAME_WIDTH 640
+#define WINDOW_HEIGHT 672
+#define WINDOW_GAME_HEIGHT 640
 #define TILE_SIZE 32
 
 //Les structs utilisé

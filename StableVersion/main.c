@@ -103,7 +103,7 @@ int main(int argc, char *argv[]) {
 
         //SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
-        coverBoardWithImage(renderer, boardtexture, WINDOW_WIDTH, WINDOW_HEIGHT, 630, 630);
+        coverBoardWithImage(renderer, boardtexture, WINDOW_WIDTH, WINDOW_HEIGHT, 672, 672);
         drawSnake(renderer, &snake, nyancattexture);
         drawFood(renderer, &food, nyancattexture);
 

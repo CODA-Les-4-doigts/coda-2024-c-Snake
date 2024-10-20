@@ -1,8 +1,8 @@
 #include "snake.h"
 
 void spawnFood(Food *food) {
-    food->position.x = (rand() % (WINDOW_WIDTH / TILE_SIZE)) * TILE_SIZE;
-    food->position.y = (rand() % (WINDOW_HEIGHT / TILE_SIZE)) * TILE_SIZE;
+    food->position.x = (rand() % (WINDOW_GAME_WIDTH / TILE_SIZE)) * TILE_SIZE;
+    food->position.y = (rand() % (WINDOW_GAME_HEIGHT / TILE_SIZE)) * TILE_SIZE;
 }
 
 int checkFoodCollision(Snake *snake, Food *food) {
