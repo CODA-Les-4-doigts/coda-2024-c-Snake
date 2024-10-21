@@ -7,9 +7,14 @@ Ce projet a été fait en collaboration avec Cecile Fischer | Victor Michi | Tho
 # Utilisation du jeu
 
 - Comment y jouer : 
-  Le Makefile a été fait pour les OS **ARCH LINUX** Donc si vous n'arrivez pas a le compiler veuillez changer le Makefile. 
+  Le Makefile a été fait pour les OS **ARCH LINUX** Donc si vous n'arrivez pas a le compiler veuillez changer le Makefile.
+  
+  - sudo pacman -S sdl2_image
+  - sudo pacman -S sdl2_mixer
+
 
 - Le jeu ce joue avec ****LES FLÈCHE DIRECTIONNEL DU CLAVIER**** ⬅️⬆️⬇️➡️.
+- ATTENTION AU OREILLES BAISSER LE SON (Petit conseil)
 
 
 # BONUS 
@@ -18,5 +23,3 @@ Ce projet a été fait en collaboration avec Cecile Fischer | Victor Michi | Tho
   Le bonus que nous avons choisis est le suivant : 
     - Lors de votre partie vous avez une une chance sur 15 de faire apparaitre un **Arc-en-ciel**. 
       Vus que vous êtes un Nyan Cat vous gagner en puissance et augmentez votre "Snake" en +3. 
-
-- ATTENTION AU OREILLES BAISSER LE SON (Petit conseil)
